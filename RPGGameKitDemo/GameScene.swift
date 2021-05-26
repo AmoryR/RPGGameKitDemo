@@ -11,8 +11,7 @@ import RPGGameKit
 class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
-        let value = RPGGameKit()
-        print(value.text)
+        // Create a game demo using RPGGameKit
     }
     
     override func update(_ currentTime: TimeInterval) {
