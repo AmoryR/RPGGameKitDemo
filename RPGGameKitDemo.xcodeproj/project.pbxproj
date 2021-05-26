@@ -3,19 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		96456D23265ED10F0068F336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D22265ED10F0068F336 /* AppDelegate.swift */; };
 		96456D25265ED10F0068F336 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 96456D24265ED10F0068F336 /* GameScene.sks */; };
-		96456D27265ED10F0068F336 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 96456D26265ED10F0068F336 /* Actions.sks */; };
 		96456D29265ED10F0068F336 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D28265ED10F0068F336 /* GameScene.swift */; };
 		96456D2B265ED10F0068F336 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D2A265ED10F0068F336 /* GameViewController.swift */; };
 		96456D2E265ED10F0068F336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96456D2C265ED10F0068F336 /* Main.storyboard */; };
 		96456D30265ED1110068F336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96456D2F265ED1110068F336 /* Assets.xcassets */; };
 		96456D3B265ED1120068F336 /* RPGGameKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D3A265ED1120068F336 /* RPGGameKitDemoTests.swift */; };
 		96456D46265ED1120068F336 /* RPGGameKitDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D45265ED1120068F336 /* RPGGameKitDemoUITests.swift */; };
+		96456D5A265EDA580068F336 /* RPGGameKit in Frameworks */ = {isa = PBXBuildFile; productRef = 96456D59265EDA580068F336 /* RPGGameKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		96456D1F265ED10F0068F336 /* RPGGameKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPGGameKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96456D22265ED10F0068F336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96456D24265ED10F0068F336 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		96456D26265ED10F0068F336 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		96456D28265ED10F0068F336 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		96456D2A265ED10F0068F336 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		96456D2D265ED10F0068F336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		96456D41265ED1120068F336 /* RPGGameKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPGGameKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96456D45265ED1120068F336 /* RPGGameKitDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGGameKitDemoUITests.swift; sourceTree = "<group>"; };
 		96456D47265ED1120068F336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96456D57265ED8630068F336 /* RPGGameKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RPGGameKit; path = ../RPGGameKit; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96456D5A265EDA580068F336 /* RPGGameKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +82,12 @@
 		96456D16265ED10F0068F336 = {
 			isa = PBXGroup;
 			children = (
+				96456D57265ED8630068F336 /* RPGGameKit */,
 				96456D21265ED10F0068F336 /* RPGGameKitDemo */,
 				96456D39265ED1120068F336 /* RPGGameKitDemoTests */,
 				96456D44265ED1120068F336 /* RPGGameKitDemoUITests */,
 				96456D20265ED10F0068F336 /* Products */,
+				96456D58265EDA580068F336 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,7 +106,6 @@
 			children = (
 				96456D22265ED10F0068F336 /* AppDelegate.swift */,
 				96456D24265ED10F0068F336 /* GameScene.sks */,
-				96456D26265ED10F0068F336 /* Actions.sks */,
 				96456D28265ED10F0068F336 /* GameScene.swift */,
 				96456D2A265ED10F0068F336 /* GameViewController.swift */,
 				96456D2C265ED10F0068F336 /* Main.storyboard */,
@@ -131,6 +133,13 @@
 			path = RPGGameKitDemoUITests;
 			sourceTree = "<group>";
 		};
+		96456D58265EDA580068F336 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,6 +156,9 @@
 			dependencies = (
 			);
 			name = RPGGameKitDemo;
+			packageProductDependencies = (
+				96456D59265EDA580068F336 /* RPGGameKit */,
+			);
 			productName = RPGGameKitDemo;
 			productReference = 96456D1F265ED10F0068F336 /* RPGGameKitDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -237,7 +249,6 @@
 				96456D2E265ED10F0068F336 /* Main.storyboard in Resources */,
 				96456D25265ED10F0068F336 /* GameScene.sks in Resources */,
 				96456D30265ED1110068F336 /* Assets.xcassets in Resources */,
-				96456D27265ED10F0068F336 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +600,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		96456D59265EDA580068F336 /* RPGGameKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = RPGGameKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 96456D17265ED10F0068F336 /* Project object */;
 }
