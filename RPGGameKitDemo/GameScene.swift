@@ -12,6 +12,7 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         // Create a game demo using RPGGameKit
+        let _ = SKSpriteNode(color: .red, size: .zero)
     }
     
     override func update(_ currentTime: TimeInterval) {
