@@ -13,7 +13,6 @@ class GameScene: RPGGameScene {
     override func didMove(to view: SKView) {
         
         // Create a game demo using RPGGameKit
-        
         let hero = RPGEntity(color: .red, size: CGSize(width: 10, height: 10))
         hero.add(to: self)
                 
