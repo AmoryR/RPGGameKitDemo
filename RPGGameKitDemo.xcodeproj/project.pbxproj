@@ -16,6 +16,7 @@
 		96456D3B265ED1120068F336 /* RPGGameKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D3A265ED1120068F336 /* RPGGameKitDemoTests.swift */; };
 		96456D46265ED1120068F336 /* RPGGameKitDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D45265ED1120068F336 /* RPGGameKitDemoUITests.swift */; };
 		96456D5A265EDA580068F336 /* RPGGameKit in Frameworks */ = {isa = PBXBuildFile; productRef = 96456D59265EDA580068F336 /* RPGGameKit */; };
+		96509520268A1EF700933536 /* DemoTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9650951F268A1EF700933536 /* DemoTileSet.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		96456D45265ED1120068F336 /* RPGGameKitDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGGameKitDemoUITests.swift; sourceTree = "<group>"; };
 		96456D47265ED1120068F336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96456D57265ED8630068F336 /* RPGGameKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RPGGameKit; path = ../RPGGameKit; sourceTree = "<group>"; };
+		9650951F268A1EF700933536 /* DemoTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DemoTileSet.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				96456D2A265ED10F0068F336 /* GameViewController.swift */,
 				96456D2C265ED10F0068F336 /* Main.storyboard */,
 				96456D2F265ED1110068F336 /* Assets.xcassets */,
+				9650951F268A1EF700933536 /* DemoTileSet.sks */,
 				96456D31265ED1110068F336 /* Info.plist */,
 			);
 			path = RPGGameKitDemo;
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96456D2E265ED10F0068F336 /* Main.storyboard in Resources */,
+				96509520268A1EF700933536 /* DemoTileSet.sks in Resources */,
 				96456D25265ED10F0068F336 /* GameScene.sks in Resources */,
 				96456D30265ED1110068F336 /* Assets.xcassets in Resources */,
 			);

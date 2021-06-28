@@ -10,12 +10,15 @@ import RPGGameKit
 
 class GameScene: RPGGameScene {
     
+    private let heroCategoryMask: UInt32 = 0x1 << 0
+    private let brickCategoryMask: UInt32 = 0x1 << 1
+    
     var hero: RPGEntity!
     
     override func didMove(to view: SKView) {
         
         // Create a game demo using RPGGameKit
-        self.hero = RPGEntity(color: .red, size: CGSize(width: 32, height: 32))
+        self.hero = RPGEntity(color: .red, size: CGSize(width: 16, height: 16))
         self.hero.add(to: self)
         
         // Camera
@@ -24,6 +27,7 @@ class GameScene: RPGGameScene {
         
         // Player movement
         hero.buildPhysics()
+        hero.setCategoryMask(categoryMask: self.heroCategoryMask)
         
         let heroGestureDetector = RPGGDEntity(entity: self.hero)
         heroGestureDetector.addUI()
@@ -31,6 +35,14 @@ class GameScene: RPGGameScene {
         RPGGestureDetectorService.shared.register(heroGestureDetector, withKey: "HeroGestureDetector")
         RPGGestureDetectorService.shared.setDefaultGestureDetector(key: "HeroGestureDetector")
         RPGGestureDetectorService.shared.activateDefault()
+        
+        // Collision
+        guard let bricksTileMap = self.childNode(withName: "Bricks") as? SKTileMapNode else {
+            fatalError("No bricks on scene")
+        }
+        bricksTileMap.createSweetLinePhysicsBody(categoryMask: self.brickCategoryMask)
+        
+        hero.addCollisionMask(collisionMask: self.brickCategoryMask)
                 
     }
     
