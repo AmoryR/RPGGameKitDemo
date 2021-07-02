@@ -11,14 +11,16 @@ import RPGGameKit
 class GameScene: RPGGameScene {
     
     private let heroCategoryMask: UInt32 = 0x1 << 0
-    private let brickCategoryMask: UInt32 = 0x1 << 1
+    private let npcCategoryMask: UInt32 = 0x1 << 1
+    private let npcContactCategoryMask: UInt32 = 0x1 << 2
+    private let brickCategoryMask: UInt32 = 0x1 << 3
     
     var hero: RPGEntity!
     
     override func didMove(to view: SKView) {
         
         // Create a game demo using RPGGameKit
-        self.hero = RPGEntity(color: .red, size: CGSize(width: 16, height: 16))
+        self.hero = RPGEntity(textureName: "Front")
         self.hero.add(to: self)
         
         // Camera
@@ -36,13 +38,28 @@ class GameScene: RPGGameScene {
         RPGGestureDetectorService.shared.setDefaultGestureDetector(key: "HeroGestureDetector")
         RPGGestureDetectorService.shared.activateDefault()
         
-        // Collision
-        guard let bricksTileMap = self.childNode(withName: "Bricks") as? SKTileMapNode else {
-            fatalError("No bricks on scene")
-        }
-        bricksTileMap.createSweetLinePhysicsBody(categoryMask: self.brickCategoryMask)
-        
+        // Collisions
+        self.addCollisionToTilemap(named: "Bricks", withCategoryMask: self.brickCategoryMask)
         hero.addCollisionMask(collisionMask: self.brickCategoryMask)
+        
+        // NPC
+        guard let npc = self.childNode(withName: "NPC") as? RPGEntity else {
+            fatalError("No npc on scene")
+        }
+        npc.setCategoryMask(categoryMask: self.npcCategoryMask)
+        npc.addContactArea(categoryMask: self.npcContactCategoryMask)
+        
+        hero.addCollisionMask(collisionMask: self.npcCategoryMask)
+        hero.addContactTest(contactMask: self.npcContactCategoryMask)
+        
+        let contactAreaHandler = RPGCHContactArea(entityCategoryMask: self.heroCategoryMask, contactAreaCategoryMask: self.npcContactCategoryMask)
+        self.register(collisionHandler: contactAreaHandler, withKey: "ContactHandler")
+        
+        // UI
+        RPGUIService.shared.enableUI(on: self)
+        
+        let hud = RPGHUD(size: CGSize(width: 100, height: 20), anchor: .topCenter)
+        hud.show()
                 
     }
     
