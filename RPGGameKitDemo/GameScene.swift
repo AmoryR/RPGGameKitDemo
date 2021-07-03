@@ -46,6 +46,7 @@ class GameScene: RPGGameScene {
         guard let npc = self.childNode(withName: "NPC") as? RPGEntity else {
             fatalError("No npc on scene")
         }
+        npc.createFeedback(textureName: "Feedback")
         npc.setCategoryMask(categoryMask: self.npcCategoryMask)
         npc.addContactArea(categoryMask: self.npcContactCategoryMask)
         
@@ -53,6 +54,7 @@ class GameScene: RPGGameScene {
         hero.addContactTest(contactMask: self.npcContactCategoryMask)
         
         let contactAreaHandler = RPGCHContactArea(entityCategoryMask: self.heroCategoryMask, contactAreaCategoryMask: self.npcContactCategoryMask)
+        contactAreaHandler.feedbackBody = .B
         self.register(collisionHandler: contactAreaHandler, withKey: "ContactHandler")
         
         // UI
