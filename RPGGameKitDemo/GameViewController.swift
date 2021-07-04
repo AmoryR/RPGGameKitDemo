@@ -16,7 +16,7 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         RPGSceneLoader.shared.set(mainViewController: self)
-        RPGSceneLoader.shared.presentScene(named: "GameScene")
+        RPGSceneLoader.shared.presentScene(named: "VillageScene")
     }
 
     override var shouldAutorotate: Bool {
