@@ -8,14 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		96456D23265ED10F0068F336 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D22265ED10F0068F336 /* AppDelegate.swift */; };
-		96456D25265ED10F0068F336 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 96456D24265ED10F0068F336 /* GameScene.sks */; };
-		96456D29265ED10F0068F336 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D28265ED10F0068F336 /* GameScene.swift */; };
 		96456D2B265ED10F0068F336 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D2A265ED10F0068F336 /* GameViewController.swift */; };
 		96456D2E265ED10F0068F336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96456D2C265ED10F0068F336 /* Main.storyboard */; };
 		96456D30265ED1110068F336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96456D2F265ED1110068F336 /* Assets.xcassets */; };
 		96456D3B265ED1120068F336 /* RPGGameKitDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D3A265ED1120068F336 /* RPGGameKitDemoTests.swift */; };
 		96456D46265ED1120068F336 /* RPGGameKitDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96456D45265ED1120068F336 /* RPGGameKitDemoUITests.swift */; };
 		96456D5A265EDA580068F336 /* RPGGameKit in Frameworks */ = {isa = PBXBuildFile; productRef = 96456D59265EDA580068F336 /* RPGGameKit */; };
+		96509520268A1EF700933536 /* DemoTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9650951F268A1EF700933536 /* DemoTileSet.sks */; };
+		965320D32690D4A700D36FC8 /* VillageScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965320D22690D4A700D36FC8 /* VillageScene.swift */; };
+		965320D52690D4B600D36FC8 /* VillageScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 965320D42690D4B500D36FC8 /* VillageScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,6 @@
 /* Begin PBXFileReference section */
 		96456D1F265ED10F0068F336 /* RPGGameKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPGGameKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96456D22265ED10F0068F336 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		96456D24265ED10F0068F336 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		96456D28265ED10F0068F336 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		96456D2A265ED10F0068F336 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		96456D2D265ED10F0068F336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96456D2F265ED1110068F336 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +50,9 @@
 		96456D45265ED1120068F336 /* RPGGameKitDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGGameKitDemoUITests.swift; sourceTree = "<group>"; };
 		96456D47265ED1120068F336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96456D57265ED8630068F336 /* RPGGameKit */ = {isa = PBXFileReference; lastKnownFileType = folder; name = RPGGameKit; path = ../RPGGameKit; sourceTree = "<group>"; };
+		9650951F268A1EF700933536 /* DemoTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = DemoTileSet.sks; sourceTree = "<group>"; };
+		965320D22690D4A700D36FC8 /* VillageScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VillageScene.swift; sourceTree = "<group>"; };
+		965320D42690D4B500D36FC8 /* VillageScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = VillageScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +106,12 @@
 		96456D21265ED10F0068F336 /* RPGGameKitDemo */ = {
 			isa = PBXGroup;
 			children = (
+				965320CB2690D26500D36FC8 /* Scenes */,
 				96456D22265ED10F0068F336 /* AppDelegate.swift */,
-				96456D24265ED10F0068F336 /* GameScene.sks */,
-				96456D28265ED10F0068F336 /* GameScene.swift */,
 				96456D2A265ED10F0068F336 /* GameViewController.swift */,
 				96456D2C265ED10F0068F336 /* Main.storyboard */,
 				96456D2F265ED1110068F336 /* Assets.xcassets */,
+				9650951F268A1EF700933536 /* DemoTileSet.sks */,
 				96456D31265ED1110068F336 /* Info.plist */,
 			);
 			path = RPGGameKitDemo;
@@ -138,6 +140,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		965320CB2690D26500D36FC8 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				965320D12690D49600D36FC8 /* Village */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		965320D12690D49600D36FC8 /* Village */ = {
+			isa = PBXGroup;
+			children = (
+				965320D22690D4A700D36FC8 /* VillageScene.swift */,
+				965320D42690D4B500D36FC8 /* VillageScene.sks */,
+			);
+			path = Village;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,7 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				96456D2E265ED10F0068F336 /* Main.storyboard in Resources */,
-				96456D25265ED10F0068F336 /* GameScene.sks in Resources */,
+				96509520268A1EF700933536 /* DemoTileSet.sks in Resources */,
+				965320D52690D4B600D36FC8 /* VillageScene.sks in Resources */,
 				96456D30265ED1110068F336 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,9 +293,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96456D29265ED10F0068F336 /* GameScene.swift in Sources */,
 				96456D2B265ED10F0068F336 /* GameViewController.swift in Sources */,
 				96456D23265ED10F0068F336 /* AppDelegate.swift in Sources */,
+				965320D32690D4A700D36FC8 /* VillageScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +466,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UNF284GYZ;
 				INFOPLIST_FILE = RPGGameKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -453,7 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amoryrouault.RPGGameKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -465,6 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9UNF284GYZ;
 				INFOPLIST_FILE = RPGGameKitDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,7 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.amoryrouault.RPGGameKitDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
