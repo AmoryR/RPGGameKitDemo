@@ -24,6 +24,15 @@ class VillageScene: RPGGameScene {
         self.hero.setCategoryMask(categoryMask: self.heroCategoryMask)
         self.hero.add(to: self)
         
+        // Hero behavior
+        let movementTexturesBehavior = RPGMovementTexturesBehavior(key: "HeroMovementTextures", textures: [
+            SKTexture(imageNamed: "HeroFront"),
+            SKTexture(imageNamed: "HeroFront"),
+            SKTexture(imageNamed: "HeroFront"),
+            SKTexture(imageNamed: "HeroFront")
+        ])
+        self.hero.register(behavior: movementTexturesBehavior)
+        
         // Camera
         let camera = RPGCamera(scene: self)
         self.hero.attach(camera: camera)
