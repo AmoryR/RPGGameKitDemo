@@ -18,7 +18,7 @@ class VillageScene: RPGGameScene {
     override func didMove(to view: SKView) {
         
         // Hero
-        self.hero = RPGEntity(textureName: "Hero")
+        self.hero = RPGEntity(textureName: "HeroFront")
         self.hero.position.x = 16
         self.hero.buildPhysics()
         self.hero.setCategoryMask(categoryMask: self.heroCategoryMask)
@@ -27,9 +27,9 @@ class VillageScene: RPGGameScene {
         // Hero behavior
         let movementTexturesBehavior = RPGMovementTexturesBehavior(key: "HeroMovementTextures", textures: [
             SKTexture(imageNamed: "HeroFront"),
-            SKTexture(imageNamed: "HeroFront"),
-            SKTexture(imageNamed: "HeroFront"),
-            SKTexture(imageNamed: "HeroFront")
+            SKTexture(imageNamed: "HeroLeft"),
+            SKTexture(imageNamed: "HeroBack"),
+            SKTexture(imageNamed: "HeroRight")
         ])
         self.hero.register(behavior: movementTexturesBehavior)
         
